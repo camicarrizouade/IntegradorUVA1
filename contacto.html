@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto</title>
+</head>
+<body class="contacto">
+    <div class="container">
+        <header class="site-header">
+            <nav class="menu">
+                <ul>
+                    <li> <a href="index.html">Home</a> </li>
+                    <li> <a href="avisos.html">Avisos</a> </li>
+                    <li> <a href="sobremi.html">Sobre Mi</a> </li>
+                    <li> <a href="materias2025.html">Materias 2025</a> </li>
+                    <li> <a href="contacto.html">Contacto</a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="grid-container">
+            <h1 class="titulo">Contacto</h1>
+            <section class="formulario">
+                <h3>Podes contactarme a traves de este formulario:</h3>
+                <form action="/action_page.php">
+                    <fieldset>
+                    <legend>Para consultas:</legend>
+                    <label for="fname">Nombre/s:</label><br>
+                    <input type="text" id="fname" name="fname" value=""><br>
+                    <label for="lname">Apellido:</label><br>
+                    <input type="text" id="lname" name="lname" value=""><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="fsubject">Asunto:</label><br>
+                    <input type="text" id="fsubject" name="fsubject" value=""><br>
+                    <label for="message">Mensaje:</label>
+                    <br><textarea name="message" rows="15" cols="25"></textarea><br>
+                    <input type="submit" value="Enviar consulta">
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+
+        <footer class="site-footer">© 2025.Todos los derechos reservados.</footer>
+    </div>
+</body>
+</html>

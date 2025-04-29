@@ -1,0 +1,363 @@
+:root {
+  --color-berkeley-blue: #003166;  
+  --color-pacific-cyan: #3AA5CF;   
+  --color-snow:         #FFFBFA;   
+  --color-aquamarine:   #6AF0C6;    
+  --color-rose-pompadour: #EC8394; 
+  --texto-principal:         #333333;
+  --fondo-header:            var(--color-berkeley-blue);
+  --fondo-seccion:           var(--color-aquamarine);
+  --fondo-footer:            var(--color-berkeley-blue);
+  --link-color:              var(--color-pacific-cyan);
+  --link-hover-color:        var(--color-rose-pompadour);
+  --border-color:            var(--color-pacific-cyan);
+  --radio-estandar:          4px;
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--texto-principal);
+    line-height: 1.5;
+    background: var(--color-snow);
+  }
+  
+a {
+    color: var(--color-pacific-cyan);
+    text-decoration: none;
+  }
+  
+a:hover {
+    text-decoration: underline;
+    color: var(--color-rose-pompadour);
+  }
+  
+img {
+    max-width: 100%;
+    display: block;
+  }
+  
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+.site-header {
+    background: var(--color-berkeley-blue);
+    padding: 1rem;
+  }
+
+.menu ul {
+    list-style: none;            
+    padding: 0;                  
+    margin: 0;
+    display: grid;
+    grid-auto-flow: column;      
+    justify-content: center;     
+    gap: 1rem;                   
+  }
+
+.menu a {
+    font-weight: 500;
+  }
+  
+.menu ul li { 
+    align-items: center;
+  }
+  
+main {
+    padding: 1rem;
+  }
+
+.grid-container {
+    display: grid;
+    max-width: 700px;
+    grid-template-areas:
+      "titulo      titulo"
+      "fechas";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    gap:0 1rem;
+    row-gap: 0;
+    padding: 1rem;
+  }
+  
+.site-footer {
+    background: var(--color-berkeley-blue);
+    color: var(--color-pacific-cyan);
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+
+.home table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+.home th,
+.home td {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    text-align: left;
+  }
+  
+.home th {
+    background: var(--color-berkeley-blue);
+    color: var(--color-snow);
+  }
+
+.home .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "fechas";
+    row-gap: 0.5rem;
+    max-width: 700px;     
+    margin: 0 auto;           
+    padding: 0.5rem 1rem;  
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    justify-items: center;
+  }
+  
+.home .titulo {
+  grid-area: titulo;
+  margin: 0;             
+  padding: 0.5rem 0;    
+  text-align: center;
+  }
+
+.home .fechas h3 {
+    margin: 0 0 0.25rem 0;
+  }
+  
+.home .fechas {
+    grid-area: fechas;
+    display: block;
+    justify-items: center;  
+    gap: 0;            
+    padding: 0.25rem 0;
+    padding: 0 !important;
+    padding-bottom: 0.25rem !important;
+    text-align: center;
+  }
+
+.fechas table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: auto !important;
+  }
+  
+.avisos main {
+    display: grid;
+    gap: 1rem;
+  }
+
+.avisos .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "tareas";
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    justify-items: center;
+  }
+
+.titulo {
+    grid-area: titulo;
+    color: var(--color-berkeley-blue);
+  }
+  
+.tareas {
+    grid-area: tareas;
+    background: var(--fondo-seccion);
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+  }
+
+.avisos ul {
+    list-style: disc inside;
+  }
+  
+.sobremi main {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  
+.sobremi .perfil img {
+    width: 100%;        
+    height: auto;
+    border-radius: 8px; 
+  }
+  
+.sobremi .grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "titulo  titulo"
+      "perfil  bio";
+    gap: 1rem;
+    max-width: 900px;   
+    margin: 0 auto;     
+    padding: 1rem;
+  }
+
+.sobremi .titulo {
+    grid-area: titulo;
+    text-align: center; 
+  }
+  
+.sobremi .perfil {
+    grid-area: perfil;
+  }
+
+.sobremi .bio {
+    grid-area: bio;
+  }  
+  
+.materias2025 .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "lista";
+    gap: 1rem;
+    max-width: 700px;   
+    margin: 0 auto;    
+    padding: 1rem;
+    justify-items: center;
+  }
+
+.materias2025 main {
+    display: grid;
+    gap: 1rem;
+  }
+  
+.materias2025 ul {
+    list-style: disc inside;
+  }
+  
+.materias2025 .titulo {
+    grid-area: titulo;
+    text-align: center;
+  }
+  
+.materias2025 .lista {
+    grid-area: lista;
+    background: var(--fondo-seccion);
+    padding: 1rem;
+    width: 100%;
+  }
+  
+.materias2025 .lista h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+.materias2025 .lista ol {
+    list-style: disc inside;
+  }
+  
+.materias2025 .lista a {
+    color: var(--link-color);
+    text-decoration: underline;
+  }
+
+.contacto .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "formulario";
+    gap: 1.5rem;
+    max-width: 600px;    
+    margin: 0 auto;      
+    padding: 1rem;
+    justify-items: center;
+  }
+  
+.contacto .titulo {
+    grid-area: titulo;
+    text-align: center;
+  }
+  
+.contacto .formulario {
+    grid-area: formulario;
+    background: var(--color-aquamarine);
+    padding: 1rem;
+    width: 100%;
+  }
+  
+.contacto .formulario form {
+    display: grid;
+    gap: 0.75rem;
+  }
+  
+.contacto label {
+    font-weight: 500;
+  }
+  
+.contacto input,
+.contacto textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--color-pacific-cyan);
+    border-radius: var(--radio-estandar);
+    width: 100%;       
+    box-sizing: border-box;
+  }
+  
+.contacto button,
+.contacto input[type="submit"] {
+    padding: 0.75rem;
+    border: none;
+    border-radius: var(--radio-estandar);
+    background-color: var(--color-berkeley-blue);
+    color: var(--color-snow);
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+.contacto fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+.contacto legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    padding: 0;
+  }
+
+  
+@media (max-width: 768px) {
+    .menu {
+      grid-auto-flow: row;
+    }
+    .menu ul {
+        grid-auto-flow: row;       
+      }    
+    .home main,
+    .avisos main,
+    .materias2025 main,
+    .contacto main {
+      grid-template-columns: 1fr;
+    }
+    .sobremi main {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
